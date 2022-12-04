@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Quotes API
+  description: Manatee Stock Ticker API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000/api
+    description: Internal staging server for testing
+tags:
+  - name: Quotes
+    description: All Endpoints
+paths:
+  /quote:
+    summary: Represents the Quotes type
+    get:
+      summary: Gets a Quote based on a Symbol
+      tags:
+        - Quotes
+      parameters:
+        - $ref: "#/components/parameters/inputQuery"
+      responses:
+        '200': # status code
+          $ref: '#/components/responses/QuoteResponse'
+components:
+  schemas:
+    Quote:
+      type: object
+      properties:
+        c:
+          type: float
+          example: 261.72
+        d:
+          type: float
+          example: 0.5
+        dp:
+          type: float
+          example: 0.33
+        h:
+          type: float
+          example: 200
+        l:
+          type: float
+          example: 300
+        o:
+          type: float
+          example: 100
+        pc:
+          type: float
+          example: 302
+        t:
+          type: float
+          example: 1582641000
+  parameters:
+    inputQuery:
+      name: input
+      in: query
+      description: Takes a url encoded stringified json object that has a \"symbol\" key
+      required: true
+      schema:
+        type: string
+        default: '{"symbol":"AAPL"}'
+  responses:
+    QuoteResponse:
+      description: Quote Response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              result:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/Quote"

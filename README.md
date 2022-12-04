@@ -17,6 +17,8 @@ to run tests:
 yarn test
 ```
 
+swagger endpoint: /docs
+
 #### Client:
 In a new terminal:
 ```sh

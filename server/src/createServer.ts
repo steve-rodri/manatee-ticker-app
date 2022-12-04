@@ -2,6 +2,10 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express"
 import cors from "cors"
 import express, { Application } from "express"
 import morgan from "morgan"
+import swaggerUi from "swagger-ui-express"
+import YAML from "yamljs"
+
+const swaggerDocument = YAML.load("./swagger.yaml")
 
 import { appRouter } from "./router"
 
@@ -16,6 +20,7 @@ const createServer = async (config: ServerConfig): Promise<Application> => {
   app.use(morgan("tiny"))
   app.use(cors({ origin: config.clientUrl }))
   app.use("/api", createExpressMiddleware({ router: appRouter(config) }))
+  app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
   return app
 }
 
