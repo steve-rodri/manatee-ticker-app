@@ -1,6 +1,10 @@
 # Stock Ticker App
 
-## Getting Setup
+live site: [https://manatee-ticker-app-client.vercel.app](https://manatee-ticker-app-client.vercel.app)
+
+![Stock Ticker App](/preview.png "Stock Ticker")
+
+## Getting Setup Locally
 
 Create .env in packages/server/ and add API_KEY
 
@@ -20,3 +24,4 @@ cd packages/client && yarn cy:open
 cd packages/server && yarn test
 ```
 I've also added swagger documentation at the /docs endpoint
+[https://manatee-ticker-app-server.up.railway.app/docs](https://manatee-ticker-app-server.up.railway.app/docs)
