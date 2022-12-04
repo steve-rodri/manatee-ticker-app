@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "manatee-stock-ticker",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mantine/core": "^5.9.0",
+    "@mantine/form": "^5.9.0",
+    "@mantine/hooks": "^5.9.0",
+    "@tanstack/react-query": "^4.19.0",
+    "@trpc/client": "^10.4.3",
+    "@trpc/react-query": "^10.4.3",
+    "@trpc/server": "^10.4.3",
+    "axios": "^1.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^4.15.1",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@typescript-eslint/eslint-plugin": "^5.45.0",

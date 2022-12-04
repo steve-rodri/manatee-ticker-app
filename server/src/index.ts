@@ -8,7 +8,7 @@ dotenv.config()
 const config: ServerConfig = {
   port: process.env.PORT ?? 4000,
   apiKey: process.env.API_KEY ?? "",
-  clientUrl: "",
+  clientUrl: "http://localhost:5173",
 }
 
 createServer(config).then((app: Application) => {
