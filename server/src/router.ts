@@ -8,7 +8,7 @@ export const appRouter = (config: ServerConfig) => {
   const t = initTRPC.create()
   return t.router({
     quote: t.procedure
-      .input(z.object({ symbol: z.string() }))
+      .input(z.object({ symbol: z.string().regex(/[A-Z]+/) }))
       .query(async req => {
         const { input } = req
         const { data: stockQuote } = await axios({
