@@ -12,7 +12,7 @@ const Root = () => {
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: import.meta.env.SERVER_URL ?? "http://localhost:4000/api",
+          url: import.meta.env.VITE_SERVER_URL ?? "http://localhost:4000/api",
         }),
       ],
     })
