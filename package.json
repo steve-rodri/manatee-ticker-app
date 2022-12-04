@@ -1,0 +1,19 @@
+{
+  "name": "manatee-ticker-app",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:steve-rodri/manatee-ticker-app.git",
+  "author": "steve-rodri <24379257+steve-rodri@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "lerna run --parallel start"
+  },
+  "devDependencies": {
+    "lerna": "^6.1.0",
+    "typescript": "^4.9.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
