@@ -2,36 +2,21 @@
 
 ## Getting Setup
 
-#### Server:
-Create new .env file and add API_KEY
+Create .env in packages/server/ and add API_KEY
 
 In a new terminal:
 ```sh
-cd server
 yarn
 yarn start
 ```
+This will install packages and start both servers
+Once started, make note of your port number on the client, change the clientUrl in packages/server/index.ts to enable cors
 
-to run tests:
+## Running Tests
+
+To run tests:
 ```sh
-yarn test
+cd packages/client && yarn cy:open
+cd packages/server && yarn test
 ```
-
-swagger endpoint: /docs
-
-#### Client:
-In a new terminal:
-```sh
-cd client
-yarn
-yarn start
-```
-
-Change the port on the client url to the one you get when you launch the client, in server/src/index.ts
-
-
-### Tests:
-make sure you ran yarn first
-```sh
-yarn cy:open
-```
+I've also added swagger documentation at the /docs endpoint

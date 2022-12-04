@@ -13,6 +13,6 @@ const config: ServerConfig = {
 
 createServer(config).then((app: Application) => {
   app.listen(config.port, () => {
-    console.info(`Server is running on: http://localhost:${config.port}/`)
+    console.info(`Server is running on port:${config.port}`)
   })
 })
