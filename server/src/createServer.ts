@@ -1,5 +1,9 @@
+import { createExpressMiddleware } from "@trpc/server/adapters/express"
 import cors from "cors"
 import express, { Application } from "express"
+import morgan from "morgan"
+
+import { appRouter } from "./router"
 
 export interface ServerConfig {
   port: string | number
@@ -9,8 +13,9 @@ export interface ServerConfig {
 
 const createServer = async (config: ServerConfig): Promise<Application> => {
   const app = express()
+  app.use(morgan("tiny"))
   app.use(cors({ origin: config.clientUrl }))
-  console.log({ apiKey: config.apiKey })
+  app.use("/api", createExpressMiddleware({ router: appRouter(config) }))
   return app
 }
 
