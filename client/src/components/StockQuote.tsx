@@ -8,5 +8,5 @@ export const StockQuote = ({ ticker }: { ticker: string }) => {
   })
   if (isLoading) return <Loader />
   if (isError) return <Text>{error.message}</Text>
-  return <Text>${data?.c}</Text>
+  return <Text data-testid="quote">${data?.c}</Text>
 }

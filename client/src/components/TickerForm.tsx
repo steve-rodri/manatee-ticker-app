@@ -14,8 +14,13 @@ export const TickerForm = ({ form, onSubmit }: TickerFormProps) => {
   const inputProps = form.getInputProps("ticker")
   return (
     <Center sx={{ maxWidth: 300 }} mx="auto">
-      <form onSubmit={onSubmit}>
-        <TextInput label="Ticker" placeholder="AAPL" {...inputProps} />
+      <form onSubmit={onSubmit} data-testid="form">
+        <TextInput
+          label="Ticker"
+          placeholder="AAPL"
+          data-testid="input"
+          {...inputProps}
+        />
         <Group position="center" mt="md">
           <Button type="submit">Submit</Button>
         </Group>
