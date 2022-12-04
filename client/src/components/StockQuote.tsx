@@ -15,6 +15,7 @@ export const StockQuote = ({ ticker }: { ticker: string }) => {
       const rounded = parseFloat(change.toString()).toFixed(2)
       return rounded
     }
+    return "0"
   })()
   if (isLoading) return <Loader />
   if (isError) return <Text>{error.message}</Text>
@@ -29,14 +30,7 @@ export const StockQuote = ({ ticker }: { ticker: string }) => {
       </Stack>
       <Stack spacing={10} align="center">
         <Title order={3}>Percent Change:</Title>
-        <Text
-          fz="lg"
-          c={
-            pctChange !== undefined && parseFloat(pctChange) > 0
-              ? "green"
-              : "red"
-          }
-        >
+        <Text fz="lg" c={parseFloat(pctChange) > 0 ? "green" : "red"}>
           {`${pctChange}%`}
         </Text>
       </Stack>

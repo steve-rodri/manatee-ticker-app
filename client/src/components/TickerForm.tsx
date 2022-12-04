@@ -18,11 +18,18 @@ export const TickerForm = ({ form, onSubmit }: TickerFormProps) => {
         <TextInput
           label="Ticker"
           placeholder="AAPL"
+          size="lg"
+          variant="filled"
           data-testid="input"
+          labelProps={{ mb: "sm" }}
+          tt="uppercase"
+          wrapperProps={{ tt: "uppercase" }}
           {...inputProps}
         />
         <Group position="center" mt="md">
-          <Button type="submit">Submit</Button>
+          <Button type="submit" size="lg">
+            Get Quote
+          </Button>
         </Group>
       </form>
     </Center>
