@@ -12,6 +12,11 @@ yarn
 yarn start
 ```
 
+to run tests:
+```sh
+yarn test
+```
+
 #### Client:
 In a new terminal:
 ```sh
@@ -22,3 +27,9 @@ yarn start
 
 Change the port on the client url to the one you get when you launch the client, in server/src/index.ts
 
+
+### Tests:
+make sure you ran yarn first
+```sh
+yarn cy:open
+```
