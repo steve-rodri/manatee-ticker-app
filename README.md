@@ -13,8 +13,8 @@ In a new terminal:
 yarn
 yarn start
 ```
-This will install packages and start both servers
-Once started, make note of your port number on the client, change the clientUrl in packages/server/index.ts to enable cors
+This will install packages and start both servers.
+Once started, make note of your port number on the client, change the clientUrl in packages/server/index.ts to enable cors.
 
 ## Running Tests
 
