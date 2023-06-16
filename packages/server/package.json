@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/index.ts",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
+    "lint": "eslint --fix \"./**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@trpc/server": "^10.4.3",

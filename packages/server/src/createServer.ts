@@ -5,9 +5,9 @@ import morgan from "morgan"
 import swaggerUi from "swagger-ui-express"
 import YAML from "yamljs"
 
-const swaggerDocument = YAML.load("./swagger.yaml")
-
 import { appRouter } from "./router"
+
+const swaggerDocument = YAML.load("./swagger.yaml")
 
 export interface ServerConfig {
   port: string | number

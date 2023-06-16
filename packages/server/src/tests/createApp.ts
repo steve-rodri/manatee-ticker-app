@@ -1,5 +1,5 @@
-import { Application } from "express"
 import dotenv from "dotenv"
+import { Application } from "express"
 
 import createServer, { ServerConfig } from "../createServer"
 

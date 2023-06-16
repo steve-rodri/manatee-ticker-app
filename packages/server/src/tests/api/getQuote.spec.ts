@@ -1,5 +1,6 @@
-import { app } from "../createApp"
 import request from "supertest"
+
+import { app } from "../createApp"
 
 const quoteMock = {
   result: {

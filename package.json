@@ -7,7 +7,9 @@
   "author": "steve-rodri <24379257+steve-rodri@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "start": "lerna run --parallel start"
+    "start": "lerna run --parallel start",
+    "format": "lerna run --parallel format",
+    "lint": "lerna run --parallel lint"
   },
   "devDependencies": {
     "lerna": "^6.1.0",

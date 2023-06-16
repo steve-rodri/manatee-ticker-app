@@ -8,7 +8,9 @@
     "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "lint": "eslint --fix \"./**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
